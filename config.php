@@ -10,7 +10,7 @@ include_once('config.inc.php');
 
 /* Attempt to connect to MySQL database */
 // $link = mysqli_connect($dbusername, $dbusername, $dbpassword, "demo");
-$link = mysqli_connect($dbusername, $dbusername, $dbpassword, "demo");
+$link = mysqli_connect($dbhost, $dbusername, $dbpassword, "demo");
 
 // Check connection
 if($link === false){
