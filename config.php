@@ -9,9 +9,9 @@ server with default setting (user 'root' with no password) */
 
 /* Attempt to connect to MySQL database */
 // $link = mysqli_connect($dbusername, $dbusername, $dbpassword, "demo");
-$dbusername = fread(fopen("php-mysql-app/dbusername.txt", "r"),filesize("php-mysql-app/dbusername.txt"));
-$dbhost = fread(fopen("php-mysql-app/dbhost.txt", "r"),filesize("php-mysql-app/dbhost.txt"));
-$dbpassword = fread(fopen("php-mysql-app/dbpassword.txt", "r"),filesize("php-mysql-app/dbpassword.txt"));
+$dbusername = fread(fopen("dbusername.txt", "r"),filesize("dbusername.txt"));
+$dbhost = fread(fopen("dbhost.txt", "r"),filesize("dbhost.txt"));
+$dbpassword = fread(fopen("php-mysql-app/dbpassword.txt", "r"),filesize("dbpassword.txt"));
 
 echo $dbpassword;
 echo $dbusername;
