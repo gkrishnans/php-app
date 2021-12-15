@@ -1,7 +1,6 @@
 <?php
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-include_once('config.inc.php');
 
 // define('DB_SERVER', 'mysql');
 // define('DB_USERNAME', 'root');
@@ -10,10 +9,15 @@ include_once('config.inc.php');
 
 /* Attempt to connect to MySQL database */
 // $link = mysqli_connect($dbusername, $dbusername, $dbpassword, "demo");
-$link = mysqli_connect($dbhost, $dbusername, $dbpassword, "demo");
+$dbusername = fread(fopen("php-mysql-app/dbusername.txt", "r"),filesize("php-mysql-app/dbusername.txt"));
+$dbhost = fread(fopen("php-mysql-app/dbhost.txt", "r"),filesize("php-mysql-app/dbhost.txt"));
+$dbpassword = fread(fopen("php-mysql-app/dbpassword.txt", "r"),filesize("php-mysql-app/dbpassword.txt"));
+
 echo $dbpassword;
 echo $dbusername;
 echo $dbhost;
+
+$link = mysqli_connect($dbhost, $dbusername, $dbpassword, "demo");
 
 // Check connection
 if($link === false){
