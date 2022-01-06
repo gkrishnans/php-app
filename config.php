@@ -17,13 +17,13 @@ echo $dbpassword;
 echo $dbusername;
 echo $dbhost;
 
-$link = mysqli_connect($dbhost, $dbusername, $dbpassword, "demo");
+// $link = mysqli_connect($dbhost, $dbusername, $dbpassword, "demo");
 
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-else{
-    echo "connected successfully"
-}
+// // Check connection
+// if($link === false){
+//     die("ERROR: Could not connect. " . mysqli_connect_error());
+// }
+// else{
+//     echo "connected successfully"
+// }
 ?>
